@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RSVP Responses</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      padding: 2rem;
+      background: #ffffff;
+      color: #1e1e1e;
+      font-family: 'Lora', serif;
+    }
+    .responses-header { max-width: 860px; margin: 0 auto 2rem; text-align: center; }
+    .responses-header h1 { margin-bottom: 0.5rem; color: #1e1e1e; }
+    .responses-header p { color: #4d4d4d; max-width: 680px; margin: 0 auto; }
+    .responses-table-wrapper { max-width: 100%; overflow-x: auto; margin: 1.5rem auto; }
+    table { width: 100%; border-collapse: collapse; background: #ffffff; border: 1px solid #ddd; }
+    th, td { padding: 0.9rem 0.8rem; border-bottom: 1px solid #e2e2e2; text-align: left; vertical-align: top; color: #1e1e1e; }
+    th { font-weight: 600; background: #f7f2e8; color: #000000; }
+    tr:hover { background: #fbf6ed; }
+    .message-box { max-width: 860px; margin: 1.5rem auto; padding: 1rem 1.2rem; border: 1px solid #ddd; border-radius: 14px; background: #f9f5ee; color: #1e1e1e; }
+    .back-link { display: inline-block; margin-top: 1rem; color: #b48d44; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 680px) {
+      .responses-header h1 { font-size: 2rem; }
+      th, td { padding: 0.75rem 0.65rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="responses-header">
+      <h1>RSVP Responses</h1>
+      <p>View the RSVP records saved from the invitation form. This page loads responses from the local SQLite backend.</p>
+    </section>
+
+    <div id="responses-message" class="message-box">Loading responses...</div>
+
+    <div class="responses-table-wrapper">
+      <table id="responses-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Attendance</th>
+            <th>Guests</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="responses-footer" style="text-align:center; margin-top:2rem;">
+      <a class="back-link" href="index.html">← Back to Invitation</a>
+    </div>
+  </main>
+
+  <script type="module" src="responses.js"></script>
+</body>
+</html>
